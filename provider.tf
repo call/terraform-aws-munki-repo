@@ -3,11 +3,7 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 3.59.0"
+      configuration_aliases = [ aws.use1 ]
     }
   }
-}
-
-provider "aws" {
-  alias   = "use1"
-  region  = "us-east-1"
 }
